@@ -1,3 +1,3 @@
-APP_ID= '204060336365834' 
-APP_SECRET= 'b09cd7497b065848e232db1fe98365d7'
+APP_ID= '1028670279641' 
+APP_SECRET= 'eb2581ff3dd424b3bc9f8b0c1eec0f3d'
 SITE_URL = 'http://buddymeme.herokuapp.com'
