@@ -1,0 +1,9 @@
+# config/facebook.yml
+development:
+ app_id: 204060336365834
+ secret_key: b09cd7497b065848e232db1fe98365d7
+ callback_url: http://buddymeme.herokuapp.com
+test:
+ ...
+production:
+ ...
