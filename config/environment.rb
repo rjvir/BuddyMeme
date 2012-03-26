@@ -6,4 +6,3 @@ BuddyMeme::Application.initialize!
 
 # config/environment.rb
 # in Rails::Initializer.run do |config|
-config.gem "koala"
