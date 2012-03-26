@@ -1,1 +1,2 @@
 <h1>This is a mother fukin' test bithcez</h1>
+<%= link_to 'Login', Koala::Facebook::OAuth.new.url_for_oauth_code(:callback => oauth_redirect_url) %>
