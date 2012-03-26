@@ -9,7 +9,7 @@ gem 'pg'
 
 gem 'json'
 
-gem "koala"
+gem 'koala', '1.3.0'
 
 # Gems used only for assets and not required
 # in production environments by default.
