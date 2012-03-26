@@ -9,4 +9,27 @@ class HomeController < ApplicationController
 			 format.html {  }
 		 end
   end
+
+  def callback
+  	if params[:code]
+  		# acknowledge code and get access token from FB
+		  session[:access_token] = session[:oauth].get_access_token(params[:code])
+		end		
+
+		 # auth established, now do a graph call:
+
+		@api = Koala::Facebook::API.new(session[:access_token])
+		begin
+			@graph_data = @api.get_object("/me/statuses", "fields"=>"message")
+		rescue Exception=>ex
+			puts ex.message
+		end
+
+  
+ 		respond_to do |format|
+		 format.html {   }			 
+		end
+
+
+	end
 end
