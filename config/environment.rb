@@ -6,3 +6,5 @@ BuddyMeme::Application.initialize!
 
 # config/environment.rb
 # in Rails::Initializer.run do |config|
+config.action_controller.allow_forgery_protection = false
+config.gem "koala"
