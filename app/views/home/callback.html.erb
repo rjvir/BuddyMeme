@@ -2,6 +2,6 @@ All your friends<br />
 <ul>
 
 <% @graph_data.each do |f| %>
-<%=link to f["name"],  home_path %> <hr>
+<%= f["name"] %> <hr>
 <% end %>
 </ul>
