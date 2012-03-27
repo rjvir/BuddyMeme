@@ -5,12 +5,12 @@ class PhotosController < ApplicationController
 		@string = "SELECT aid FROM album WHERE owner='#{params[:id]}'"
 		@aids = @api.fql_query("SELECT aid, name FROM album WHERE owner='#{params[:id]}'")
 
-		#@aids.each do |object|
-		#	if object["name"]=="Profile Pictures"
-		#		@profile_aid = object["aid"]
-		#		break
-		#	end
-		#end
-		#@profile_path = @api.get_picture(params[:id])
+		@aids.each do |object|
+			if object["name"]=="Profile Pictures"
+				@profile_aid = object["aid"]
+				break
+			end
+		end
+		@profile_path = @api.get_picture(params[:id])
 	end
 end
