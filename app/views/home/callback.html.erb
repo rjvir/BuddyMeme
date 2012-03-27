@@ -1,7 +1,7 @@
 All your friends<br />
 <ul>
-
+<!--f["name"]-->
 <% @graph_data.each do |f| %>
-<%= f["name"] %> <hr>
+<%= link_to 'User Photos', user_photos_path %> <hr>
 <% end %>
 </ul>
