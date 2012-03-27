@@ -1,5 +1,5 @@
 class UserPhotosController < ApplicationController
-	def show
+	def get_pictures
 		
 	end
 end
