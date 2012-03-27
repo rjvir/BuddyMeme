@@ -1,5 +1,5 @@
 class PhotosController < ApplicationController
-	def index 
-		@id = params[:id];
+	def show 
+		
 	end
 end
