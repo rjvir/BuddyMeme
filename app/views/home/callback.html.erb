@@ -1,9 +1,13 @@
-All your friends<br />
+Your top friends<hr><br />
 <!--<%= @top_friends %>-->
 
 <% @top_friends["query2"].each do |top| %>
-<%= top["name"] %> <hr>
+	<%= if top["id"]!=@meUID%> 
+		<%= top["name"] %> <hr>
+	<%= end %>
 <% end %>
+
+All your friends<hr><br/>
 
 <ul>
 <!--f["name"]-->
