@@ -16,4 +16,5 @@ class PhotosController < ApplicationController
 		@pics = @api.fql_query("SELECT src_big FROM photo WHERE aid='#{@profile_aid}'")
 
 	end
+
 end
