@@ -22,7 +22,7 @@ class HomeController < ApplicationController
 		begin
 			#@graph_data = @api.get_object("/me/statuses", "fields"=>"message")
 			@graph_data = @api.get_connections("me","friends")
-			me = @graph.get_object("me");
+			me = @api.get_object("me");
 			@meUID = me["id"];
 			@top_friends = @api.fql_multiquery(
 			:query1 => "SELECT actor_id, message, permalink, created_time, comments.count FROM stream WHERE source_id=me() LIMIT 0,150",
