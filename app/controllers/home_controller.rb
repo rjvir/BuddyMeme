@@ -23,7 +23,7 @@ class HomeController < ApplicationController
 			#@graph_data = @api.get_object("/me/statuses", "fields"=>"message")
 			@graph_data = @api.get_connections("me","friends")
 			@me = @api.get_object("me");
-			@meUID = me["uid"];
+			:meUID = me["id"];
 			@top_friends = @api.fql_multiquery(
 			:query1 => "SELECT actor_id, message, permalink, created_time, comments.count FROM stream WHERE source_id=me() LIMIT 0,150",
 			:query2 => "SELECT uid, name, pic_square, profile_url FROM user WHERE uid IN (SELECT actor_id from #query1) LIMIT 0,15"
