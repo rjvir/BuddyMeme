@@ -1,9 +1,9 @@
 Your top friends<hr><br />
 <!--<%= @top_friends %>-->
-
+<% me = @api.get_object("me") %>
 
 <% @top_friends["query2"].each do |top| %>
-	<% if top["uid"]==@me["id"] %>
+	<% if top["uid"]== me["id"] %>
 		THEY ARE EQUAL
 		<%= top["name"] %> 
 		<%= top["uid"] %>
