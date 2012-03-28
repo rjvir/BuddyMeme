@@ -1,9 +1,9 @@
 Your top friends<hr><br />
 <!--<%= @top_friends %>-->
-<% @test_query %>
 
 <% @top_friends["query2"].each do |top| %>
 		<%= link_to top["name"], photos_path(:id => top["uid"]) %> 
+		<%= image_tag top["profile_url"] %>
 		<hr>
 <% end %>
 <br>
