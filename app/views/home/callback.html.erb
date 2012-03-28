@@ -2,7 +2,7 @@ Your top friends<hr><br />
 <!--<%= @top_friends %>-->
 
 <% @top_friends["query2"].each do |top| %>
-	<% if top["id"]!=@meUID%> 
+	<% if top["id"]!=@meUID %> 
 		<%= top["name"] %> <hr>
 	<% end %>
 <% end %>
