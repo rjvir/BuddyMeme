@@ -1,7 +1,8 @@
 Your top friends<hr><br />
 <!--<%= @top_friends %>-->
+meUID is..
 <%= @meUID %>
-
+..
 <% @top_friends["query2"].each do |top| %>
 	<% if top["id"]!=@meUID %>
 		<%= top["name"] %> 
