@@ -5,10 +5,13 @@ Me UID is..
 ..
 
 <% @top_friends["query2"].each do |top| %>
-	<%= if top["uid"]!=@meUID %>
+	<% if top["uid"]==@meUID %>
+		THEY ARE EQUAL
 		<%= top["name"] %> 
 		<%= top["uid"] %>
 		<hr>
+	<% else %>
+	THEY ARE NOT EQUAL
 	<% end %>
 <% end %>
 <br>
