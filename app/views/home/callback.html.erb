@@ -1,6 +1,10 @@
 All your friends<br />
-<%= @top_friends %>
-<%= @test %>
+<!--<%= @top_friends %>-->
+
+<% @top_friends["query2"].each do |top| %>
+<%= top["name"] %> <hr>
+<% end %>
+
 <ul>
 <!--f["name"]-->
 <% @graph_data.each do |f| %>
