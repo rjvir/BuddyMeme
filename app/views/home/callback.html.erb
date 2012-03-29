@@ -1,5 +1,19 @@
 Your top friends<hr><br />
+<% count = 0 %>
+<% array = [] %>
+<% @top_friends["query2"].each do |top| %>
+		<% array.push(top) %>
+<% end %>
 
+<% random_array = array.sort_by{rand} %>
+
+<% random_array.each do |person| %>
+	<% if count < 5 %>
+		<%= link_to person["name"], photos_path(:id => person["uid"]) %> 
+		<%= image_tag person["pic_square"]%>
+		<% count+=1 %>
+	<% end %>
+<% end %>
 
 <br>
 All your friends<hr>
