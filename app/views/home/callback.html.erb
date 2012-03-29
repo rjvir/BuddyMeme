@@ -1,9 +1,13 @@
-Your top friends<hr><br />n
+Your top friends<hr><br />
 
 <% @top_friends["query2"].each do |top| %>
+	<% r = Random.new %>
+	<% if r.rand(0..1) == 1 %>
+		random number was 1
 		<%= link_to top["name"], photos_path(:id => top["uid"]) %> 
 		<%= image_tag top["pic_square"]%>
 		<hr>
+	<% end %> 
 <% end %>
 <br>
 All your friends<hr>
