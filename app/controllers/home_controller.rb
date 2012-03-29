@@ -25,8 +25,8 @@ class HomeController < ApplicationController
 			me = @api.get_object("me");
 			@meUID = me["id"];
 			@top_friends = @api.fql_multiquery(
-			:query1 => "SELECT actor_id, message, permalink, created_time, comments.count FROM stream WHERE source_id=me() LIMIT 0,150",
-			:query2 => "SELECT uid, name, pic_square, profile_url FROM user WHERE uid IN (SELECT actor_id from #query1) AND uid <> me() LIMIT 0,15"
+			:query1 => "SELECT actor_id FROM stream WHERE source_id=me() LIMIT 0,150",
+			:query2 => "SELECT uid, name, pic_square FROM user WHERE uid IN (SELECT actor_id from #query1) AND uid <> me() LIMIT 0,15"
 			)
 			#@test_query = @api.fql_query("SELECT pic_big FROM user WHERE uid='1200702'")
 		rescue Exception=>ex
