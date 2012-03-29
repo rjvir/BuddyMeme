@@ -2,9 +2,8 @@ Your top friends<hr><br />
 <% array = [] %>
 <% @top_friends["query2"].each do |top| %>
 		<% array.push(top) %>
-		<hr>
 <% end %>
-<% array.sort_by{rand}.slice(0..4) %>
+<% array.shuffle %>
 
 <% array.each do |person| %>
 	<%= link_to person["name"], photos_path(:id => person["uid"]) %> 
