@@ -14,10 +14,15 @@ class HomeController < ApplicationController
   	if params[:code]
   		# acknowledge code and get access token from FB
 		  session[:access_token] = session[:oauth].get_access_token(params[:code])
-		end		
+		  redirect_to friends_path
+	end		
 
 		 # auth established, now do a graph call:
 
+
+	end
+
+	def friends
 		@api = Koala::Facebook::API.new(session[:access_token])
 		begin
 			#@graph_data = @api.get_object("/me/statuses", "fields"=>"message")
@@ -37,7 +42,6 @@ class HomeController < ApplicationController
  		respond_to do |format|
 		 format.html {   }			 
 		end
-
 
 	end
 
