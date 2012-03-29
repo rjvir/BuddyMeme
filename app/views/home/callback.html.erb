@@ -4,7 +4,7 @@ Your top friends<hr><br />
 <% @top_friends["query2"].each do |top| %>
 		<% array.push(top) %>
 <% end %>
-<% array.shuffle %>
+<% array.shuffle(random: Random.new(1)) %>
 
 <% array.each do |person| %>
 	<% if count < 5 %>
