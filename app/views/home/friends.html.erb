@@ -10,7 +10,7 @@ Your top friends<hr><br />
 <% random_array.each do |person| %>
 	<% if count < 5 %>
 		<%= link_to person["name"], photos_path(:id => person["uid"]) %> 
-		<%= image_tag person["pic_square"]%>
+		<%= link_to image_tag(person["pic_square"]), photos_path(:id => person["uid"]) %>
 		<% count+=1 %>
 	<% end %>
 <% end %>
