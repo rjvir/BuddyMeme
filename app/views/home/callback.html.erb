@@ -3,7 +3,7 @@ Your top friends<hr><br />
 
 <% @top_friends["query2"].each do |top| %>
 		<%= link_to top["name"], photos_path(:id => top["uid"]) %> 
-		<!--<%=# top["profile_url"] %>-->
+		
 		<hr>
 <% end %>
 <br>
