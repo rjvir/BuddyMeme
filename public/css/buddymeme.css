@@ -67,7 +67,8 @@ h4 {
 }
 
 .facebook-login {
-  background: url('/images/facebook-login.png') 0px 0px no-repeat;
+  background-image: url('/images/facebook-login.png');
+  background-repeat:no-repeat;
   width: 251px;
   height: 46px;
   cursor: pointer;
