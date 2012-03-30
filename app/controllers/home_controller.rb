@@ -30,7 +30,7 @@ class HomeController < ApplicationController
 			:query1 => "SELECT actor_id FROM stream WHERE source_id=me() LIMIT 0,150",
 			:query2 => "SELECT uid, name, pic_square FROM user WHERE uid IN (SELECT actor_id from #query1) AND uid <> me() LIMIT 0,15",
 			:query3 => "SELECT uid2 FROM friend WHERE uid1 = me()",
-			:query4 => "SELECT name FROM user WHERE uid IN (SELECT uid2 from #query3")
+			:query4 => "SELECT name FROM user WHERE uid IN (SELECT uid2 from #query3)"
 			)
 			#@test_query = @api.fql_query("SELECT pic_big FROM user WHERE uid='1200702'")
 		rescue Exception=>ex
