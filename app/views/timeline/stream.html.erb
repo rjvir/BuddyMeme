@@ -3,4 +3,5 @@
 <% @app_photo_data.each do |photo| %>
 	<%= link_to photo["attachment"]["media"][0]["href"], photo["attachment"]["media"][0]["href"]%>
 	<%= image_tag photo["attachment"]["media"][0]["src"] %> 
+	<hr>
 <% end %>
