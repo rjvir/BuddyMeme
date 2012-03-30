@@ -1,7 +1,7 @@
 body {
     background-color:#fefefe;
     color:#111;
-    background-image:url(../noise.png);
+    background-image:url(/images/noise.png);
 }
 
 body.splash {
@@ -11,7 +11,7 @@ body.splash {
 
 .splash-supercontainer {
 	width:100%;
-	background-image:url(../noise.png);
+	background-image:url(/images/noise.png);
 	background-color:rgba(252,252,252,.9);
 	padding-bottom:20px;
 	padding-top:20px;
@@ -67,7 +67,7 @@ h4 {
 }
 
 .facebook-login {
-  background: url('../facebook-login.png') 0px 0px no-repeat;
+  background: url('/images/facebook-login.png') 0px 0px no-repeat;
   width: 251px;
   height: 46px;
   cursor: pointer;
@@ -179,7 +179,7 @@ h4 {
 .searchicon {
 	width:24px;
 	height:24px;
-	background-image:url(../find.png);
+	background-image:url(/images/find.png);
 	float:left;
 	margin-left:-32px;
 	margin-top:10px;
