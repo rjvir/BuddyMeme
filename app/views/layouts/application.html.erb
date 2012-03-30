@@ -1,12 +1,53 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <title>BuddyMeme</title>
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+<html> 
+	<head> 
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+		<title>
+			Buddy Meme
+		</title> 
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="title" content="Raj Vir" />
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/text.css" />
+		<link rel="stylesheet" type="text/css" href="css/960.css" />
+		<link rel="stylesheet" type="text/css" href="css/buddymeme.css" />
+		<script type="text/javascript">
+
+			var _gaq = _gaq || [];
+			_gaq.push(['_setAccount', 'UA-18115656-2']);
+			_gaq.push(['_trackPageview']);
+
+			(function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			})();
+
+		</script>
+		<script type="text/javascript" src="http://use.typekit.com/rzf1fbu.js"></script>
+    	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    	<script type="text/javascript" src="http://cloud.github.com/downloads/malsup/cycle/jquery.cycle.all.latest.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$('.cycle').cycle();
+			});
+		</script>
+	</head>
+    
+  <body class="splash">
+  	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) return;
+		  js = d.createElement(s); js.id = id;
+		  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=204060336365834";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+
 
 <%= yield %>
 

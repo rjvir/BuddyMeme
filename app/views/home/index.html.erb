@@ -1,4 +1,26 @@
-<h3> Right now this uses Koala to get all your friends and print them to the screen using OAuth</h3>
-<%= link_to 'Authenticate this Facebook app', @auth_url, :class=>"button"%>
-<br/>
-<%= link_to 'Timeline page', stream_path, :class=>"button" %>
+	<div class="splash-supercontainer">
+	  <div class="container_12">
+		<div class="grid_9 prefix_3">
+			<h1 class="logo">BuddyMeme</h1>
+		</div>
+	    <div class="grid_5 cycle">
+	    	<img src="rauh.png" />
+	    	<img src="neil.png" />
+	    	<img src="han.png" />
+	    	<img src="martin.png" />
+	    	<img src="danyaal.png" />
+	    </div>
+		<div class="grid_6 prefix_1">
+		    <h2>Create Memes of Your Friends</h2>
+		    <h3>View and create hilarious memes using pictures of your friends. It's super easy and fun!</h3>
+		    <%= link_to 'Login with Facebook', @auth_url, :class=>"facebook-login"%>
+	    </div>
+	  </div>
+	</div>
+	<div class="container_12">
+		<div class="grid_6 prefix_6">
+			<div class="fb-like" data-href="http://buddymeme.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
+
+		</div>
+	</div>
+
