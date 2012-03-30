@@ -1,4 +1,5 @@
 <h3> Instagram Photos </h3>
 <% @app_photo_data.each do |photo| %>
-	<%= link_to "http://facebook.com/#{photo["app_data"]["photo_ids"][0]}" %><hr>
+	<% url = "http://facebook.com/#{photo["app_data"]["photo_ids"][0]}" %>
+	<%= link_to url, url %> <hr>
 <% end %>
