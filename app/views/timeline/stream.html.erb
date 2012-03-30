@@ -2,5 +2,5 @@
 
 <% @app_photo_data.each do |photo| %>
 	<% string = "http://facebook.com/#{photo["app_data"]["photo_ids"][0]}" %>
-	<%= image_tag  string%> <hr>
+	<%=   string%> <hr>
 <% end %>
