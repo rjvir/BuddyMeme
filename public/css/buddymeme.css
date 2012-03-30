@@ -1,0 +1,214 @@
+body {
+    background-color:#fefefe;
+    color:#111;
+    background-image:url(../noise.png);
+}
+
+body.splash {
+    background:rgba(0,0,0,.5) url(http://buddymeme.com/bg.jpg);
+    background:url(https://twimg0-a.akamaihd.net/profile_background_images/479030940/twilk_background_4f753656d8454.jpg);
+}
+
+.splash-supercontainer {
+	width:100%;
+	background-image:url(../noise.png);
+	background-color:rgba(252,252,252,.9);
+	padding-bottom:20px;
+	padding-top:20px;
+	margin-top:10%;
+	border-top:2px solid #888;
+	border-bottom:2px solid #888;
+}
+
+h1,h2,h3,h4,p {
+    color:#111;
+    text-shadow:1px 1px 1px #ccc;
+}
+
+h3,h4,p {
+	font-family:'proxima-nova-1','proxima-nova-2';
+	font-weight:normal;
+}
+
+h1 {
+	background-image: url(http://buddymeme.com/buddymeme.png);
+	height: 90px;
+	background-repeat: no-repeat;
+	text-indent: -9999px;
+	width: 457px;
+	display: block;
+	float: left;
+	margin-left:-20px;
+	margin-bottom:-10px;
+}
+
+.splash h1 {
+	margin-bottom:20px;
+}
+
+h2 {
+	font-size:52px;
+	line-height:1em;
+	font-family:'peachy-keen-1', 'peachy-keen-2';
+}
+
+h3 {	
+	font-size:22px;
+	line-height:1.25em;
+}
+
+h4 {
+	font-size:20px;
+	margin-bottom:0px;
+}
+
+.clear {
+	clear:both;
+}
+
+.facebook-login {
+  background: url('../facebook-login.png') 0px 0px no-repeat;
+  width: 251px;
+  height: 46px;
+  cursor: pointer;
+  text-indent: -9999px;
+  display:block;
+  float:left;
+}
+
+.facebook-login:hover {
+  background-position: 0px -46px;
+}
+
+.facebook-login:active {
+  margin-top:2px;
+}
+
+.fb-like {
+	margin-top:20px;
+}
+
+.crumbs{
+
+}
+
+.crumb {
+	font-size:24px;
+	text-decoration:none;
+	margin-right:10px;
+	font-family:'proxima-nova-1';
+	color:#0000aa;
+}
+
+.crumb:after {
+	margin-left:10px;
+	content:"\BB";
+	color:#888;
+}
+
+.crumb:hover {
+	text-decoration:underline;
+	color:#0000cc;
+}
+
+.crumb:after:hover {
+	text-decoration:none;
+	color:#888;
+}
+
+.crumb.current {
+	font-weight:bold;
+	color:#111;
+}
+
+.crumb.current:hover {
+	text-decoration:none;
+}
+
+.crumb.current:after {
+	content:"";
+}
+
+.friend {
+	text-align:center;
+	text-decoration:none;
+	color:#000088;
+	padding-top:12px;
+	padding-bottom:6px;
+	background-color:rgba(226,226,226,.4);
+	border-radius:8px;
+	box-shadow:1px solid red;
+	font-family:'proxima-nova-1','proxima-nova-2';
+	overflow:hidden;
+	height:74px;
+	display:block;
+}
+
+.friend:hover {
+	background-color:rgba(226,226,226,.6);
+	color:#0000aa;
+	text-decoration:underline;
+}
+
+.friend img {
+	display:inline;
+	clear:both;
+}
+
+.friend span {
+	display:block;
+	text-align:center;
+	font-weight:bold;
+	padding-top:8px;
+	text-decoration:none;
+}
+
+.search {
+	border:1px solid #ccc;
+	background-color:#fcfcfc;
+	font-size:24px;
+	padding:6px;
+	border-radius:4px;
+	margin:0;
+	width:400px;
+	font-family:'proxima-nova-1', 'proxima-nova-2';
+	float:left;
+	display:block;
+}
+
+.searchicon {
+	width:24px;
+	height:24px;
+	background-image:url(../find.png);
+	float:left;
+	margin-left:-32px;
+	margin-top:10px;
+}
+
+/*
+ul.friends {
+	display:block;
+	margin-top:20px;
+	list-style:none;
+}
+
+ul.friends li {
+	font-family:'proxima-nova-1','proxima-nova-2';
+	overflow:hidden;
+}
+
+ul.friends li:nth-child(4n+2), ul.friends li:nth-child(4n+3){
+	text-align:center;
+}
+
+ul.friends li:nth-child(4n+4){
+	text-align:right;
+}
+*/
+
+.supercontainer {
+	background-color:rgba(226,226,226,.4);
+	padding-top:10px;
+	padding-bottom:-30px;
+	margin-bottom:10px;
+}
