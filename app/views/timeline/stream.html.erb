@@ -1,5 +1,5 @@
 <h3> Instagram Photos </h3>
 <%#= @app_photo_data %>
 <% @app_photo_data.each do |photo| %>
-	<%= image_tag photo["attachment"]["media"][0]["href"] %> 
+	<%= photo["attachment"]["media"][0]["href"] %> 
 <% end %>
