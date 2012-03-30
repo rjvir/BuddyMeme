@@ -60,4 +60,5 @@ BuddyMeme::Application.routes.draw do
   match 'home/callback' => 'home#callback'
   match "photos" => "photos#show"
   match "friends" => 'home#friends'
+  match "stream" => 'timeline#stream'
 end
