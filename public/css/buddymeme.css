@@ -214,12 +214,13 @@ ul.friends li:nth-child(4n+4){
 }
 
 .thumb-container {
-    margin-bottom:10px;
+    margin-bottom:30px;
     display:block;
+    height:130px;
 }
 
 .thumb-container:hover img {
-    border:5px solid #00a;
+    border:5px solid #00d;
 }
 
 .thumb-container img {
