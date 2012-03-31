@@ -17,7 +17,8 @@ class PhotosController < ApplicationController
 		end
 	end
 
-	@pics = @api.fql_query("SELECT src_big,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
+  @pics = @api.get_object("#{@profile_aid}/photo")
+#	@pics = @api.fql_query("SELECT src_big,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
 
 	end
 
