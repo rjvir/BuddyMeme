@@ -89,7 +89,9 @@ h4 {
 }
 
 .crumbs{
-
+    margin-left:-10px;
+    font-size:24px;
+    color:#111;
 }
 
 .crumb {
@@ -99,10 +101,6 @@ h4 {
 	margin-left:10px;
 	font-family:'proxima-nova-1';
 	color:#0000aa;
-}
-
-.crumbs:first-child {
-    margin-left:0px;
 }
 
 .crumb:after {
