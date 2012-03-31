@@ -14,7 +14,7 @@
     <a href="<%= @identifier %>"> Profile Pictures</a> - 
     <a class="current"> Tagged Pictures</a>
   </div>
-<% @pics.each do |pic_object| %>
+<% @tagged_photos["query2"].each do |photo| %>
 	<% if photo["src_big_width"] > 300 && photo["src_big_height"] > 300 %>
 	  <a class="grid_2 thumb-container" href="make?url=<%= photo["src_big"] %>"%>
 	    <img src="<%= photo["src"] %>" width="<%= photo["src_width"] %>" height="<%= photo["src_height"] %>" data-bigWidth="<%= photo["src_big_width"] %>" data-bigHeight="<%= photo["src_big_height"] %>" />
