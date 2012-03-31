@@ -6,10 +6,17 @@
 	</div>
 </div>
 <div class="container_12">
-<a href="tagged?id=<%= @identifier %>" > Tagged Photos</a>
+	<div class="grid_12">
+		<a class="crumb" href="friends">Select A Friend</a>
+		<a class="crumb current">Choose a Picture</a>
+	</div>
+  <div class="grid_12 tabs">
+    <a class="current"> Profile Pictures</a>
+    <a href="tagged?id=<%= @identifier %>" > Tagged Pictures</a>
+  </div>
 <% @pics.each do |pic_object| %>
-	<% if pic_object["src"]!=""%>
-		<a href="make?url=<%= pic_object["src_big"] %>"%>
+	<% if pic_object["src"]!="" && pic_object["src_big_width"] > 300 && pic_object["src_big_height"] > 300 %>
+		<a class="thumb-container" href="make?url=<%= pic_object["src_big"] %>"%>
 		  <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" data-bigWidth="<%= pic_object["src_big_width"] %>" data-bigHeight="<%= pic_object["src_big_height"] %>" />
 		</a>
 	<%end%>
