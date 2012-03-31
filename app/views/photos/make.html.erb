@@ -102,11 +102,11 @@ function changeFontSize(newFontSize,multiplier){
 //once clicking submit
 $('#post').click(function(){
 	//save canvas element to a data uri
-	//dataURI = can.toDataURL();
+	dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation';
-  FB.api('/me/feed', 'post', { message: body }, function(response) {
+  FB.api('/me/photos', 'post', { name: body, source:dataURI }, function(response) {
     if (!response || response.error) {
       alert('Error occured');
     } else {
