@@ -1,7 +1,8 @@
 <h1> here is the user photos page-show</h1>
-<%= @profile_pics %>
 <% @pics.each do |pic_object| %>
-	<% if pic_object["src_big"]!=""%>
-		<%= image_tag  pic_object["src_big"]%> <hr>
+	<% if pic_object["src"]!=""%>
+		<a href="make?url=<%= pic_object["src"] %>"%>">
+		  <img src="<%= pic_object["src"] %> width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] " />
+		</a>
 	<%end%>
 <%end %>
