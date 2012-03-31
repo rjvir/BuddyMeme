@@ -3,7 +3,7 @@
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src"]!=""%>
 		<a href="make?url=<%= pic_object["src_big"] %>"%>
-		  <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" />
+		  <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" data-bigWidth="<%= pic_object["src_big_width"] %>" data-bigHeight="<%= pic_object["src_big_height"] %>" />
 		</a>
 	<%end%>
 <%end %>
