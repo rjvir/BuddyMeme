@@ -1,2 +1,5 @@
 
 <%= @tagged_photos %>
+<% @tagged_photos["query2"].each do |photo| %>
+	<%= image_tag photo["src"] %><hr>
+<%end%>
