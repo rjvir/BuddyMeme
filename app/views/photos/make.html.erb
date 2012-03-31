@@ -77,13 +77,13 @@ function changeFontSize(newFontSize,multiplier){
 	}
 
 	//REPEAT THE ABOVE, BUT FOR THE BOTTOM
- 		var y = <?=$height?> - fontSize*lineHeight+fontSize;
+ 		var y = <%= @photo[0]['src_big_height'] %> - fontSize*lineHeight+fontSize;
 	while(ctx.measureText(bottom).width>fitWidth){
 		fontSize = .9*fontSize;
 		ctx.font = fontSize + "pt Impact";
 	}
 
-     	ctx.fillText( bottom, x, y, <?=$width?>);
+     	ctx.fillText( bottom, x, y, <%= @photo[0]['src_big_width'] %>);
      	ctx.strokeWidth = fontSize/16 + "px";
      	ctx.strokeText( bottom, x, y, <%= @photo[0]['src_big_width'] %>);
 
