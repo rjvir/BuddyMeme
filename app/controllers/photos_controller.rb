@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
 
 	def tagged_photos
 		@api = Koala::Facebook::API.new(session[:access_token])
-		@tagged_photos = @api.fql_query("SELECT pid FROM photo_tag WHERE subject=#{params[:url]}")
+		@tagged_photos = @api.fql_query("SELECT pid FROM photo_tag WHERE subject=#{params[:id]}")
 	end
 
 	def make
