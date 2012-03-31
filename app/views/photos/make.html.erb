@@ -5,7 +5,7 @@ $(document).ready(function(){
 
 //initializes a new javascript image, and sets the source to a value passed from php
   var img = new Image();
-  img.src = '<%= @photo[0]["src_big"] %>';
+  img.src = 'proxy?url=<%= @photo[0]["src_big"] %>';
   //sets the can and context variables of the canvas
   var can = document.getElementById('canvas');
   var ctx = can.getContext('2d');  
