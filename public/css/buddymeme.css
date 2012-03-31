@@ -31,7 +31,7 @@ h3,h4,p {
 }
 
 h1 {
-	background-image: url(http://buddymeme.com/buddymeme.png);
+	background-image: url(/images/logo.png);
 	height: 90px;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
