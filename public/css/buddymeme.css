@@ -212,3 +212,7 @@ ul.friends li:nth-child(4n+4){
 	padding-bottom:-30px;
 	margin-bottom:10px;
 }
+
+.thumb-container {
+    height:140px;
+}
