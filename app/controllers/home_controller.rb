@@ -20,7 +20,7 @@ class HomeController < ApplicationController
 		 # auth established, now do a graph call:
 
 
-	end
+	#end
 
 	def friends
 		@api = Koala::Facebook::API.new(session[:access_token])
