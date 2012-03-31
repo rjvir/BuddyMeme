@@ -217,11 +217,12 @@ ul.friends li:nth-child(4n+4){
     height:130px;
     width:130px;
     margin-bottom:30px;
-    border:5px solid #ddd;
-    border-radius:5px;
     display:block;
 }
 
 .thumb-container img {
     margin:0 auto;
+    display:block;
+    border:5px solid #ddd;
+    border-radius:5px;
 }
