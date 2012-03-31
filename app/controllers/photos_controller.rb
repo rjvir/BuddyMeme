@@ -24,7 +24,7 @@ class PhotosController < ApplicationController
 	def tagged_photos
 		@api = Koala::Facebook::API.new(session[:access_token])
 		@tagged_photos = @api.fql_multiquery(:query1 => "SELECT pid FROM photo_tag WHERE subject=#{params[:id]}", 
-			:query2 => "SELECT src, src_big FROM photos WHERE pid IN (SELECT pid in #query1)"
+			:query2 => "SELECT src, src_big FROM photos WHERE pid IN (SELECT pid from #query1)"
 		)
 	end
 
