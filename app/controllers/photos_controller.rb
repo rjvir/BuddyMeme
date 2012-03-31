@@ -33,8 +33,7 @@ class PhotosController < ApplicationController
 		#return unless params[:url].include?("fbcdn.net") 
 		url = URI.parse(params["url"])
    		result = Net::HTTP.get_response(url)
-      	send_data :text => result.body, :type => 'image/jpeg', :disposition => 'inline'
-	
+		send_data result.body, :type => result.content_type, :disposition => 'inline'	
 
 	end
 
