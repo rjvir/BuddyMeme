@@ -17,8 +17,8 @@ class PhotosController < ApplicationController
 		end
 	end
 
-  @pics = @api.get_connections(@profile_aid,"photos")
-#	@pics = @api.fql_query("SELECT src_big,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
+#  @pics = @api.get_connections(@profile_aid,"photos")
+	@pics = @api.fql_query("SELECT src_big,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
 
 	end
 

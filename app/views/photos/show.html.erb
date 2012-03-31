@@ -1,12 +1,11 @@
 <div class="container_12">
 <a href="tagged?id=<%= @identifier %>" > Tagged Photos</a>
-<%= pics.to_json %>
-<%# @pics.each do |pic_object| %>
-	<%# if pic_object["src"]!=""%>
-		<a href="make?url=<%#= pic_object["src_big"] %>"%>
-		  <img src="<%#= pic_object["src"] %>" width="<%#= pic_object["src_width"] %>" height="<%#= pic_object["src_height"] %>" />
+<% @pics.each do |pic_object| %>
+	<% if pic_object["src"]!=""%>
+		<a href="make?url=<%= pic_object["src_big"] %>"%>
+		  <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" />
 		</a>
-	<%#end%>
-<%#end %>
+	<%end%>
+<%end %>
 </div>
 </div>
