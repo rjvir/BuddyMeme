@@ -1,4 +1,25 @@
-<%= link_to 'Profile Pictures', photos_path %>
-<% @tagged_photos["query2"].each do |photo| %>
-	<%= image_tag photo["src"] %><hr>
-<%end%>
+<div class="supercontainer">
+	<div class="container_12">
+		<div class="grid_12">
+			<h1 class="logo">BuddyMeme</h1>
+		</div>
+	</div>
+</div>
+<div class="container_12">
+	<div class="grid_12">
+		<a class="crumb" href="friends">Select A Friend</a>
+		<a class="crumb current">Choose a Picture</a>
+	</div>
+  <div class="grid_12 tabs">
+    <a href="<%= @identifier %>"> Profile Pictures</a> - 
+    <a class="current"> Tagged Pictures</a>
+  </div>
+<% @pics.each do |pic_object| %>
+	<% if photo["src_big_width"] > 300 && photo["src_big_height"] > 300 %>
+	  <a class="grid_2 thumb-container" href="make?url=<%= photo["src_big"] %>"%>
+	    <img src="<%= photo["src"] %>" width="<%= photo["src_width"] %>" height="<%= photo["src_height"] %>" data-bigWidth="<%= photo["src_big_width"] %>" data-bigHeight="<%= photo["src_big_height"] %>" />
+	  </a>
+	<%end%>
+<%end %>
+</div>
+</div>
