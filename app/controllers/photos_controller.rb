@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
 	end
 
 	def proxy
-	    return unless params[:url].include?("fbcdn")
+#	    return unless params[:url].include?("fbcdn")
   		data = open(params[:url]).read
   		send_data data, :type => 'image/jpeg', :disposition => 'inline'
 	end
