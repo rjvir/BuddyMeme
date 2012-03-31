@@ -106,9 +106,9 @@ $('#post').click(function(){
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation'; 
-  FB.api('/me/photos', 'post', { name: body, source:'http://basketball.realgm.com/images/nba/4.2/wiretap/photos/2006/Thibodeau_Tom_100829.jpg' }, function(response) {
+  FB.api('/me/photos', 'post', { message:dataURI }, function(response) {
     if (!response || response.error) {
-      alert('Error occured you mudafuka: ' + response.error);
+      alert('Error occured: ' + JSON.stringify(response.error));
     } else {
       alert('Post ID: ' + response.id);
     }
