@@ -43,10 +43,12 @@ class PhotosController < ApplicationController
 	  @photo = @api.fql_query("SELECT src_big,src_big_width,src_big_height,pid FROM photo WHERE pid='#{params[:pid]}'")
 	end
 	
-	def boomerang
+	def writer
 	  data = params[:data]
-	  File.open('public/memes/test.png', 'w') {|f| f.write(data) }
-#  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
+    File.open('public/test.png', 'wb') do |f|
+      f.write(Base64.decode64(base))
+    end
+    #  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
   end
 
 end

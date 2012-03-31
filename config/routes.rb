@@ -64,5 +64,5 @@ BuddyMeme::Application.routes.draw do
   match "tagged" => 'photos#tagged_photos'
   match "make" => 'photos#make'
   match "proxy" => 'photos#proxy'
-  match "boomerang" => 'photos#boomerang'
+  match "writer" => 'photos#writer'
 end

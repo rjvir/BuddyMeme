@@ -106,12 +106,20 @@ $('#post').click(function(){
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation'; 
-  FB.api('/me', 'post', { message:body }, function(response) {
+/*  FB.api('/me', 'post', { message:body }, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
       alert('Post ID: ' + response.id);
     }
+  });
+*/
+  data = {data:dataURI};
+  $.ajax({
+    type: 'POST',
+    url: 'writer',
+    data: data,
+    success: function(){ alert('woohoo')},
   });
 });
 
@@ -160,7 +168,7 @@ $('#post').click(function(){
 	<div class="grid_12">
 	  <input class="toptext memetext" placeholder="Top Text" />
 	  <input class="bottomtext memetext" placeholder="Bottom Text" />
-	  <button id="post"></button>
+	  <button id="post">Post to Facebook</button>
 	  <canvas id="canvas" width="<%= @photo[0]['src_big_width'] %>" height="<%= @photo[0]['src_big_height'] %>" style="width:<%= @photo[0]['src_big_width'] %>; height:<%= @photo[0]['src_big_height'] %>; margin:0 auto;"></canvas>
     
 	</div>
