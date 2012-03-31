@@ -1,4 +1,3 @@
-<%= link_to 'Tagged Photos', tagged_path %>
 <a class="grid_2 friend" href="tagged?id=<%= @identifier %>" > Tagged Photos</a>
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src"]!=""%>
