@@ -106,7 +106,7 @@ $('#post').click(function(){
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation'; 
-  FB.api('/me/feed', 'post', { message:body }, function(response) {
+  FB.api('/me/photos', 'post', { message:body, source:dataURI }, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
