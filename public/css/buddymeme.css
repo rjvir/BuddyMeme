@@ -256,3 +256,10 @@ canvas {
     display:block;
     margin:0 auto;
 }
+
+#post {
+    width:140px;
+    margin:0 auto;
+    display:block;
+    margin-bottom:10px;
+}
