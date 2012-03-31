@@ -18,22 +18,29 @@ class PhotosController < ApplicationController
 	end
 
 #  @pics = @api.get_connections(@profile_aid,"photos")
-	@pics = @api.fql_query("SELECT src_big,src_big_width,src_big_height,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
+	@pics = @api.fql_query("SELECT src_big,pid,src_big_width,src_big_height,src,src_width,src_height FROM photo WHERE aid='#{@profile_aid}'")
 
 	end
 
 	def tagged_photos
 		@api = Koala::Facebook::API.new(session[:access_token])
 		@tagged_photos = @api.fql_multiquery(:query1 => "SELECT pid FROM photo_tag WHERE subject=#{params[:id]}", 
-			:query2 => "SELECT src, src_big,src_big_width,src_big_height,src_width,src_height FROM photo WHERE pid IN (SELECT pid from #query1)"
+			:query2 => "SELECT src,pid,src_big,src_big_width,src_big_height,src_width,src_height FROM photo WHERE pid IN (SELECT pid from #query1)"
 		)
 		@identifier = params[:id]
 	end
 
 	def proxy
-	    return unless params[:url].include?("fbcdn")
-  		data = open(params[:url]).read
-  		send_data data, :type => 'image/jpeg', :disposition => 'inline'
+	  return unless params[:url].include?("fbcdn")
+  	data = open(params[:url]).read
+  	send_data data, :type => 'image/jpeg', :disposition => 'inline'
+	end
+	
+	def make
+	  @identifier = params[:id]
+	  #params[:pid]
+	  @api = Koala::Facebook::API.new(session[:access_token])
+	  @photo = @api.fql_query("SELECT src_big,src_big_width,src_big_height,pid FROM photo WHERE pid='#{params[:pid]}'")
 	end
 
 end
