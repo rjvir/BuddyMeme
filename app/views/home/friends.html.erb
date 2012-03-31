@@ -22,7 +22,7 @@
   <% random_array.each do |person| %>
   	<% if count < 5 %>
   		<a class="grid_2 friend" href="<%= photos_path(:id => f["uid"]) %>" >
-  		  <img src="<%= image_tag(person["pic_square"]) %>" />
+  		  <img src="<%= person["pic_square"] %>" />
   		  <span><%= f["name"] %></span>
   		  <% count+=1 %>
   		</a>
