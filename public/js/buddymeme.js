@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	$('.cycle').cycle();
 
-    $('.all-friends .friend').sort(function(a,b){return a.innerHTML.toLowerCase() > b.innerHTML.toLowerCase() ? 1 : -1;}).appendTo('.all-friends');
+    $('.all-friends .friend').sort(function(a,b){return a.getElementsByTagName('span').innerHTML.toLowerCase() > b.getElementsByTagName('span').innerHTML.toLowerCase() ? 1 : -1;}).appendTo('.all-friends');
 	jQuery.expr[':'].Contains = function(a,i,m){
 		return jQuery(a).text().toUpperCase().indexOf(m[3].toUpperCase())>=0;
 	};
