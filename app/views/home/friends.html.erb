@@ -1,27 +1,48 @@
-Your top friends<hr><br />
+<div class="supercontainer">
+	<div class="container_12">
+		<div class="grid_12">
+			<h1 class="logo">BuddyMeme</h1>
+		</div>
+	</div>
+</div>
+<div class="container_12">
+	<div class="grid_12">
+		<a class="crumb current">Select A Friend</a>
+	</div>
+  <% count = 0 %>
+  <% array = [] %>
+  <% @top_friends["query2"].each do |top| %>
+  		<% array.push(top) %>
+  <% end %>
+  <% random_array = array.sort_by{rand} %>
 
-<% count = 0 %>
-<% array = [] %>
-<% @top_friends["query2"].each do |top| %>
-		<% array.push(top) %>
-<% end %>
+	<div class="grid_12" style="margin-bottom:10px;">
+		<h4>Suggested Friends</h4>
+	</div>
 
-<% random_array = array.sort_by{rand} %>
+  <% random_array.each do |person| %>
+  	<% if count < 6 %>
+  	  
+  		<a class="grid_2 friend" href="photos?id=<%= person["uid"] %>" >
+  		  <img src="<%= person["pic_square"] %>" />
+  		  <span><%= person["name"] %></span>
+  		  <% count+=1 %>
+  		</a>
+  	<% end %>
+  <% end %>
 
-<% random_array.each do |person| %>
-	<% if count < 5 %>
-		<%= link_to person["name"], photos_path(:id => person["uid"]) %> 
-		<%= link_to image_tag(person["pic_square"]), photos_path(:id => person["uid"]) %>
-		<% count+=1 %>
-	<% end %>
-<% end %>
-
-<br>
-All your friends<hr>
-
-<ul>
-<!--f["name"]-->
-<% @top_friends["query4"].each do |f| %>
-	<%= link_to f["name"], photos_path(:id => f["uid"]) %> <hr>
-<% end %>
-</ul>
+	<div class="grid_12" style="margin-bottom:15px;">
+		<h4 style="margin-bottom:10px;">All Friends</h4>
+		<input type="text" class="search" placeholder="Search" /><div class="searchicon"></div>
+		<div class="clear"></div>
+	</div>
+  
+	<div class="friends all-friends">
+  <% @top_friends["query4"].each do |f| %>
+		<a class="grid_2 friend" href="photos?id=<%= f["uid"] %>">
+			<img src="http://dummyimage.com/50x50" />
+			<span><%= f["name"] %></span>
+		</a>
+  <% end %>
+  </div>
+</div>
