@@ -105,15 +105,12 @@ $('#post').click(function(){
 	//dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
-  var wallPost = {
-      message : "testing...",
-      picture: "http://url/to/pic.jpg"
-  };
-  FB.api('/me/feed', 'post', wallPost , function(response) {
+  var body = 'Reading JS SDK documentation';
+  FB.api('/me/feed', 'post', { message: body }, function(response) {
     if (!response || response.error) {
       alert('Error occured');
     } else {
-      alert('Post ID: ' + response);
+      alert('Post ID: ' + response.id);
     }
   });
 });
