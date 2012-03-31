@@ -1,5 +1,6 @@
-<h1> here is the user photos page-show</h1>
+<div class="container_12">
 <%= link_to 'Tagged Photos', tagged_path %>
+
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src"]!=""%>
 		<a href="make?url=<%= pic_object["src_big"] %>"%>
@@ -7,3 +8,4 @@
 		</a>
 	<%end%>
 <%end %>
+</div>
