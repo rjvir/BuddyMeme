@@ -45,7 +45,7 @@ class PhotosController < ApplicationController
 	
 	def writer
 	  data = params[:data]
-    File.open("#{RAILS_ROOT}/public/test.png", 'wb') do |f|
+    File.open("#{RAILS_ROOT}/public/test.png", 'w') do |f|
       f.write(Base64.decode64(base))
     end
     #  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
