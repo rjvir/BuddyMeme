@@ -241,10 +241,18 @@ ul.friends li:nth-child(4n+4){
 }
 
 .memetext {
-    width:300px;
+    width:360px;
     margin:0 auto;
+    display:block;
+    padding:5px;
+    margin-bottom:10px;
     font-family:'proxima-nova-1','proxima-nova-2';
     font-size:24px;
     border:1px solid #aaa;
     border-radius:5px;
+}
+
+canvas {
+    display:block;
+    margin:0 auto;
 }
