@@ -216,3 +216,8 @@ ul.friends li:nth-child(4n+4){
 .thumb-container {
     height:140px;
 }
+
+.thumb-container img {
+    margin:0 auto;
+    vertical-align:middle;
+}
