@@ -1,5 +1,4 @@
-
-<%= @tagged_photos %>
+<%= link_to 'Profile Pictures', photos_path %>
 <% @tagged_photos["query2"].each do |photo| %>
 	<%= image_tag photo["src"] %><hr>
 <%end%>
