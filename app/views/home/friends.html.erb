@@ -40,7 +40,7 @@
 	<div class="friends all-friends">
   <% @top_friends["query4"].each do |f| %>
 		<a class="grid_2 friend" href="photos?id=<%= f["uid"] %>">
-			<img src="http://dummyimage.com/50x50" />
+			<img src="<%= f['pic_square'] %>" />
 			<span><%= f["name"] %></span>
 		</a>
   <% end %>
