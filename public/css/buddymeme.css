@@ -96,14 +96,16 @@ h4 {
 	font-size:24px;
 	text-decoration:none;
 	margin-right:10px;
+	margin-left:10px;
 	font-family:'proxima-nova-1';
 	color:#0000aa;
 }
 
+.crumbs:first-child {
+    margin-left:0px;
+}
+
 .crumb:after {
-	margin-left:10px;
-	content:"\BB";
-	color:#888;
 }
 
 .crumb:hover {
@@ -220,7 +222,7 @@ ul.friends li:nth-child(4n+4){
 }
 
 .thumb-container:hover img {
-    border:5px solid #00d;
+    border:5px solid rgba(0,0,226,.5);
 }
 
 .thumb-container img {

@@ -27,6 +27,7 @@ class PhotosController < ApplicationController
 		@tagged_photos = @api.fql_multiquery(:query1 => "SELECT pid FROM photo_tag WHERE subject=#{params[:id]}", 
 			:query2 => "SELECT src, src_big,src_big_width,src_big_height,src_width,src_height FROM photo WHERE pid IN (SELECT pid from #query1)"
 		)
+		@identifier = params[:id]
 	end
 
 	def proxy
