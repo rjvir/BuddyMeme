@@ -38,11 +38,11 @@
 	</div>
   
 	<div class="friends all-friends">
-  <% @top_friends["query4"].each do |f| %>
-		<a class="grid_2 friend" href="<%= photos_path(:id => f["uid"]) %>">
+  <%# @top_friends["query4"].each do |f| %>
+		<a class="grid_2 friend" href="<%#= photos_path(:id => f["uid"]) %>">
 			<img src="http://dummyimage.com/50x50" />
-			<span><%= f["name"] %></span>
+			<span><%#= f["name"] %></span>
 		</a>
-  <% end %>
+  <%# end %>
   </div>
 </div>
