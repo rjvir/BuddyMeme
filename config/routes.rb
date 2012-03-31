@@ -61,4 +61,5 @@ BuddyMeme::Application.routes.draw do
   match "photos" => "photos#show"
   match "friends" => 'home#friends'
   match "stream" => 'timeline#stream'
+  match "tagged" => 'photos#tagged_photos'
 end

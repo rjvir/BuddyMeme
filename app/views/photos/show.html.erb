@@ -1,4 +1,5 @@
 <h1> here is the user photos page-show</h1>
+<%= link_to 'Tagged Photos', tagged_path %> 
 <%= @profile_pics %>
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src_big"]!=""%>
