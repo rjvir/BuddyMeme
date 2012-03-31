@@ -30,7 +30,7 @@ class PhotosController < ApplicationController
 	end
 
 	def make
-		return unless params[:url].include?("fbcdn.net") 
+		#return unless params[:url].include?("fbcdn.net") 
 
   		data = open(params[:url]).read
   		send_data data, :type => 'image/jpeg', :disposition => 'inline'
