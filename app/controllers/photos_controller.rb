@@ -33,7 +33,7 @@ class PhotosController < ApplicationController
     	headers['Content-Type'] = 'image/jpeg' 
    		headers['Cache-Control'] = 'public' 
     	headers['Expires'] = 'Mon, 28 Jul 2020 23:30:00 GMT' 
-    	open(params[:url]).read 
+    	#open(params[:url]).read 
 	end
 
 end
