@@ -26,4 +26,12 @@ class PhotosController < ApplicationController
 		@tagged = @api.fql_query("SELECT pid FROM photo_tag WHERE subject=me()")
 	end
 
+	def make
+		return unless params[:url].include?("facebook.com") 
+   		headers['Content-Type'] = 'image/jpeg' 
+    	headers['Cache-Control'] = 'public' 
+    	headers['Expires'] = 'Mon, 28 Jul 2020 23:30:00 GMT' 
+    	open(params[:url]).read 
+	end
+
 end
