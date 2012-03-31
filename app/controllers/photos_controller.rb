@@ -23,7 +23,7 @@ class PhotosController < ApplicationController
 
 	def tagged_photos
 		@api = Koala::Facebook::API.new(session[:access_token])
-		@object = @api.get_object(params[:id])
+		@object = @api.get_photos(params[:id])
 	end
 
 	def make
