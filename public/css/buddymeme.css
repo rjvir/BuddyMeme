@@ -32,13 +32,12 @@ h3,h4,p {
 
 h1 {
 	background-image: url(/images/logo.png);
-	height: 90px;
+	height: 64px;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
-	width: 457px;
+	width: 400px;
 	display: block;
 	float: left;
-	margin-left:-20px;
 	margin-bottom:-10px;
 }
 
