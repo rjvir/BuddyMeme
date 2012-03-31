@@ -42,5 +42,10 @@ class PhotosController < ApplicationController
 	  @api = Koala::Facebook::API.new(session[:access_token])
 	  @photo = @api.fql_query("SELECT src_big,src_big_width,src_big_height,pid FROM photo WHERE pid='#{params[:pid]}'")
 	end
+	
+	def boomerang
+	  data = params[:data]
+  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
+  end
 
 end

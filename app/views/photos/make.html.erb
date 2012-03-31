@@ -105,8 +105,9 @@ $('#post').click(function(){
 	dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
+	dataURI = 'http://buddymeme.com/boomerang?data='+dataURI;
   var body = 'Reading JS SDK documentation';
-  FB.api('/<%= @identifier %>/photos', 'post', { name: body, source:dataURI }, function(response) {
+  FB.api('/<%= @identifier %>/photos', 'post', { name: body, link:dataURI }, function(response) {
     if (!response || response.error) {
       alert('Error occured');
     } else {
