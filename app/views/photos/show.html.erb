@@ -16,9 +16,11 @@
   </div>
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src"]!="" && pic_object["src_big_width"] > 300 && pic_object["src_big_height"] > 300 %>
-		<a class="thumb-container grid_2" href="make?url=<%= pic_object["src_big"] %>"%>
-		  <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" data-bigWidth="<%= pic_object["src_big_width"] %>" data-bigHeight="<%= pic_object["src_big_height"] %>" />
-		</a>
+		<div class="grid_2">
+		  <a class="thumb-container" href="make?url=<%= pic_object["src_big"] %>"%>
+		    <img src="<%= pic_object["src"] %>" width="<%= pic_object["src_width"] %>" height="<%= pic_object["src_height"] %>" data-bigWidth="<%= pic_object["src_big_width"] %>" data-bigHeight="<%= pic_object["src_big_height"] %>" />
+		  </a>
+		</div>
 	<%end%>
 <%end %>
 </div>
