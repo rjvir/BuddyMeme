@@ -106,9 +106,9 @@ $('#post').click(function(){
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation';
-  FB.api('/<%= @identifier %>/photos', 'post', { name: body, source:'http://i.imgur.com/Py3Pe.jpg' }, function(response) {
+  FB.api('/<%= @identifier %>/photos', 'post', { name: body, source:dataURI }, function(response) {
     if (!response || response.error) {
-      alert('Error occured you mudafuka');
+      alert('Error occured you mudafuka: ' + response.error);
     } else {
       alert('Post ID: ' + response.id);
     }
