@@ -105,8 +105,13 @@ $('#post').click(function(){
 	dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
-  var body = 'Reading JS SDK documentation'; 
-  FB.api('/me/photos', 'post', { source:dataURI }, function(response) {
+  var body = 'Reading JS SDK documentation';
+  var formData = new FormData();
+
+  for (var i = 0, dataURI; dataURI = dataURI[i]; ++i) {
+    formData.append(dataURI.name, dataURI);
+  }
+  FB.api('/me/photos', 'post', { message:body,source:formData }, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
