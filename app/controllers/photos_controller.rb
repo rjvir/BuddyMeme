@@ -45,7 +45,8 @@ class PhotosController < ApplicationController
 	
 	def boomerang
 	  data = params[:data]
-  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
+	  File.open('public/memes/test.png', 'w') {|f| f.write(data) }
+#  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
   end
 
 end
