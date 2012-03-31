@@ -105,32 +105,17 @@ $('#post').click(function(){
 	//dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
-	FB.ui(
-    {
-     method: 'feed',
-     message: 'getting educated about Facebook Connect',
-     name: 'Connect',
-     caption: 'The Facebook Connect JavaScript SDK',
-        description: (
-        'A small JavaScript library that allows you to harness ' +
-        'the power of Facebook, bringing the user\'s identity, ' +
-        'social graph and distribution power to your site.'
-     ),
-     link: 'http://www.fbrell.com/',
-     picture: 'http://www.fbrell.com/f8.jpg',
-     actions: [
-          { name: 'fbrell', link: 'http://www.fbrell.com/' }
-     ],
-    user_message_prompt: 'Share your thoughts about RELL'
-    },
-    function(response) {
-      if (response && response.post_id) {
-        alert('Post was published.');
-      } else {
-        alert('Post was not published.');
-      }
+  var wallPost = {
+      message : "testing...",
+      picture: "http://url/to/pic.jpg"
+  };
+  FB.api('/me/feed', 'post', wallPost , function(response) {
+    if (!response || response.error) {
+      alert('Error occured');
+    } else {
+      alert('Post ID: ' + response);
     }
-  );
+  });
 });
 
 });
