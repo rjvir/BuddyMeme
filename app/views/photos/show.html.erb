@@ -1,4 +1,5 @@
-<a class="grid_2 friend" href="tagged?id=<%= @identifier %>" > Tagged Photos</a>
+<div class="container_12">
+<a href="tagged?id=<%= @identifier %>" > Tagged Photos</a>
 <% @pics.each do |pic_object| %>
 	<% if pic_object["src"]!=""%>
 		<a href="make?url=<%= pic_object["src_big"] %>"%>
@@ -6,4 +7,5 @@
 		</a>
 	<%end%>
 <%end %>
+</div>
 </div>
