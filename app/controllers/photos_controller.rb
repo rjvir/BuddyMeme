@@ -37,7 +37,7 @@ class PhotosController < ApplicationController
 	end
 	
 	def make
-	  @identifier = params[:id]
+	  @identifier = params[:uid]
 	  #params[:pid]
 	  @api = Koala::Facebook::API.new(session[:access_token])
 	  @photo = @api.fql_query("SELECT src_big,src_big_width,src_big_height,pid FROM photo WHERE pid='#{params[:pid]}'")
