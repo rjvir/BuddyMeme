@@ -60,7 +60,7 @@ BuddyMeme::Application.routes.draw do
       {
         'Pragma'        => 'public',
         'Cache-Control' => "max-age=#{1.year.to_i}",
-        'Expires'       => 1.year.from.now.to_s(:rfc822),
+        'Expires'       => 60*60*24*365,
         'Content-Type'  => 'text/html'
       },
       ['<script type="text/javascript" src="//connect.facebook.net/en_US/all.js"></script>']
