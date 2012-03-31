@@ -232,8 +232,10 @@ ul.friends li:nth-child(4n+4){
 
 .tabs a {
     text-decoration:none;
+    color:#0000aa;
 }
 
 .tabs .current {
     font-weight:bold;
+    color:#111;
 }

@@ -11,7 +11,7 @@
 		<a class="crumb current">Choose a Picture</a>
 	</div>
   <div class="grid_12 tabs">
-    <a href="<%= @identifier %>"> Profile Pictures</a> - 
+    <a href="photos?id=<%= @identifier %>"> Profile Pictures</a> - 
     <a class="current"> Tagged Pictures</a>
   </div>
 <% @tagged_photos["query2"].each do |photo| %>
