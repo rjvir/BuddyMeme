@@ -156,7 +156,7 @@ h4 {
 	clear:both;
 }
 
-.friend span {
+.friend span.bottom {
 	display:block;
 	text-align:center;
 	font-weight:bold;
