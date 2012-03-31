@@ -229,3 +229,11 @@ ul.friends li:nth-child(4n+4){
     border:5px solid #ddd;
     border-radius:5px;
 }
+
+.tabs a {
+    text-decoration:none;
+}
+
+.tabs .current {
+    font-weight:bold;
+}
