@@ -31,10 +31,10 @@ class PhotosController < ApplicationController
 
 	def make
 		return unless params[:url].include?("fbcdn.net") 
-    	headers['Content-Type'] = 'image/jpeg' 
-   		headers['Cache-Control'] = 'public' 
-    	headers['Expires'] = 'Mon, 28 Jul 2020 23:30:00 GMT' 
-    	open(params[:url]).read 
+
+		data = open(params[:file]).read
+		send_data data, :filename => params[:name], ...
+
 	end
 
 end
