@@ -27,7 +27,7 @@ function changeFontSize(newFontSize,multiplier){
 //drawText adds text to the image. Unfortunately, the only way to do this is to erase the canvas completely and then redraw the entire thing with new text.
   function drawText(top, bottom){
 
-	fitWidth = <?=$width?>;
+	fitWidth = <%= @photo[0]['src_big_width'] %>;
 	//draw an image with no text onto the canvas
   	ctx.drawImage(img,0,0);
 
