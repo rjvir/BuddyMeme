@@ -125,5 +125,9 @@ $('#post').click(function(){
 		</div>
 	</div>
 	
-	<input class="top-text" />
-	<input class="bottom-text" />
+	<div class="grid_12">
+	  <input class="toptext memetext" placeholder="Top Text" />
+	  <input class="bottomtext memetext" placeholder="Bottom Text" />
+	  <canvas id="canvas" width="<%= @photo[0]['src_big_width'] %>" height="<%= @photo[0]['src_big_height'] %>" style="width:<%= @photo[0]['src_big_width'] %>; height:<%= @photo[0]['src_big_height'] %>; margin:0 auto;"></canvas>
+    
+	</div>

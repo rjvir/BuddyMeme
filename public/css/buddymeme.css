@@ -239,3 +239,12 @@ ul.friends li:nth-child(4n+4){
     font-weight:bold;
     color:#111;
 }
+
+.memetext {
+    width:300px;
+    margin:0 auto;
+    font-family:'proxima-nova-1','proxima-nova-2';
+    font-size:24px;
+    border:1px solid #aaa;
+    border-radius:5px;
+}
