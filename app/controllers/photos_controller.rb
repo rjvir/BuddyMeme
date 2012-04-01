@@ -56,8 +56,8 @@ class PhotosController < ApplicationController
     url = "http://talktomindy.com/memes/#{params[:hash]}.png"
 	  @api = Koala::Facebook::API.new(session[:access_token])
 #    @api.put_picture(@foo.remote_image_path,{}, album_id)
-    response = @api.put_picture(url, {:message => "Message"})
-    puts response
+    @response = @api.put_picture(url, {:message => "Message"})
+    #puts response
     #id = response[:pid]
     #args = {:x=>45, :y=>45, :tag_uid=>session[:id], :pid=>id}
     #@api.rest_call('photos.addTag', args)
