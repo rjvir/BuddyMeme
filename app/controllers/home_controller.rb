@@ -31,6 +31,8 @@ class HomeController < ApplicationController
 			:query3 => "SELECT uid2 FROM friend WHERE uid1 = me()",
 			:query4 => "SELECT name, uid,pic_square, pic_big FROM user WHERE uid IN (SELECT uid2 from #query3)"
 			)
+			@permissions = @api.get_connections('1136210092', 'permissions')
+			@has_wallpost_permission = @permissions[0]['pubish_stream']
 			#@test_query = @api.fql_query("SELECT pic_big FROM user WHERE uid='1200702'")
 		rescue Exception=>ex
 			puts ex.message
