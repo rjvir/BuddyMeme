@@ -60,7 +60,7 @@ class PhotosController < ApplicationController
     #puts response
     id = @response["post_id"]
     args = {:x=>45, :y=>45}
-    @api.put_object('100000503215765_133113/tags/573014549', "post", args)
+    @api.put_object('100000503215765_133113', 'tags/573014549', args)
 #    @api.rest_call('photos.addTag', args)
   end
 end
