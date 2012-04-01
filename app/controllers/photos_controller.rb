@@ -2,6 +2,7 @@ class PhotosController < ApplicationController
 	def show 
 		@api = Koala::Facebook::API.new(session[:access_token])
 		@identifier = params[:id];
+		session[:id] = @identifier;
 		#@string = "SELECT aid FROM album WHERE owner='#{params[:id]}'"
 		#@profile_pics = @api.fql_multiquery(
 		#	:query1 => "SELECT aid, name FROM album WHERE owner='#{params[:id]}'",
@@ -57,6 +58,7 @@ class PhotosController < ApplicationController
 #    @api.put_picture(@foo.remote_image_path,{}, album_id)
     tags.x = 45;
     tags.y = 45;
+    tags.to = session[:id]
     @api.put_picture(url, {:message => "Message", :tags => tags})
   end
 end
