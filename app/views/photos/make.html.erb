@@ -133,7 +133,7 @@ $('#post').click(function(){
     formData.append(dataURI.name, dataURI);
   }
 */
-  var blob = dataURItoBlob(dataURL);
+  var blob = dataURItoBlob(dataURI);
   var fd = new FormData(document.forms[0]);
   fd.append("source", blob);
   FB.api('/me/photos', 'post', { message:body,source:formData }, function(response) {
