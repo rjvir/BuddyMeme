@@ -99,6 +99,27 @@ function changeFontSize(newFontSize,multiplier){
 	drawText(toptext, bottomtext);
 });
 
+function dataURItoBlob(dataURI) {
+    // convert base64 to raw binary data held in a string
+    // doesn't handle URLEncoded DataURIs
+    var byteString = atob(dataURI.split(',')[1]);
+
+    // separate out the mime component
+    var mimeString = dataURI.split(',')[0].split(':')[1].split(';')[0]
+
+    // write the bytes of the string to an ArrayBuffer
+    var ab = new ArrayBuffer(byteString.length);
+    var ia = new Uint8Array(ab);
+    for (var i = 0; i < byteString.length; i++) {
+        ia[i] = byteString.charCodeAt(i);
+    }
+
+    // write the ArrayBuffer to a blob, and you're done
+    var bb = new BlobBuilder();
+    bb.append(ab);
+    return bb.getBlob(mimeString);
+}
+
 //once clicking submit
 $('#post').click(function(){
 	//save canvas element to a data uri
@@ -106,11 +127,15 @@ $('#post').click(function(){
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation';
-  var formData = new FormData();
+/*  var formData = new FormData();
 
   for (var i = 0, dataURI; dataURI = dataURI[i]; ++i) {
     formData.append(dataURI.name, dataURI);
   }
+*/
+  var blob = dataURItoBlob(dataURL);
+  var fd = new FormData(document.forms[0]);
+  fd.append("source", blob);
   FB.api('/me/photos', 'post', { message:body,source:formData }, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
@@ -140,8 +165,7 @@ $('#post').click(function(){
         channelUrl : '//www.buddymeme.com/channel.html', // Channel File
         status     : true, // check login status
         cookie     : true, // enable cookies to allow the server to access the session
-        xfbml      : true,  // parse XFBML
-        setFileUploadSupport: true
+        xfbml      : true  // parse XFBML
       });
 
       // Additional initialization code here
