@@ -114,7 +114,7 @@ $('#post').click(function(){
   
   formData.append('message','test');
 
-  FB.api('/me/photos', 'post', { formData }, function(response) {
+  FB.api('/me/photos', 'post', formData, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
