@@ -65,4 +65,5 @@ BuddyMeme::Application.routes.draw do
   match "make" => 'photos#make'
   match "proxy" => 'photos#proxy'
   match "writer" => 'photos#writer'
+  match "about" => 'home#about'
 end
