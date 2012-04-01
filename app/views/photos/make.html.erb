@@ -185,6 +185,8 @@ $('#post').click(function(){
 	</div>
 	<form name="input" action="http://talktomindy.com/save.php" id="form" method="post">
     <input type="hidden" name="image" id="formimage" value="">
+    <input type="hidden" name="token" value="<%=@at%>">
+    <input type="hidden" name="friendid" value="<%=@friendid%>">
   </form>
 	<div class="grid_12">
 	  <input class="toptext memetext" placeholder="Top Text" />
