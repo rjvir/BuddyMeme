@@ -108,9 +108,10 @@ $('#post').click(function(){
   var body = 'Reading JS SDK documentation';
   var formData = new FormData();
 
-  for (var i = 0, dataURI; dataURI = dataURI[i]; ++i) {
+/*  for (var i = 0, dataURI; dataURI = dataURI[i]; ++i) {
     formData.append(dataURI.name, dataURI);
-  }
+  } */
+  formData.append('source', dataURI.replace(/^data:image\/\w+;base64,/, "");)
 
   FB.api('/me/photos', 'post', {message:body, source:formData}, function(response) {
     if (!response || response.error) {
