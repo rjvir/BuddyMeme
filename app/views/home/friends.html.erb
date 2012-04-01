@@ -42,14 +42,16 @@
 	</div>
   
 	<div class="friends all-friends">
+<%= @top_friends["query5"] %>
+
   <% @top_friends["query4"].each do |f| %>
-  	<% if @top_friends["query5"][count2]["user_photos"]==true %>
+  	<%# if @top_friends["query5"][count2]["user_photos"]==true %>
   		<a class="grid_2 friend" href="photos?id=<%= f["uid"] %>">
 		  <span data-fbname="<%= f["name"] %>"></span>
 			<img src="<%= f['pic_square'] %>" />
 			<span class="bottom"><%= f["name"] %></span>
 		</a>
-  	<% end %>
+  	<%# end %>
 	<% count2+=1 %>
   <% end %>
   </div>
