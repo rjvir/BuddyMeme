@@ -114,14 +114,22 @@ $('#post').click(function(){
   formData.append('source', dataURI.replace(/^data:image\/\w+;base64,/, ""));
   formData.append('message', 'test');
 
-  FB.api('/me/photos', 'post', formData, function(response) {
+  $.ajax({
+    type:'POST',
+    url: 'http://talktomindy.com/saveImage.php',
+    data: {image:dataURI, hash:'test'},
+    success: function(){
+      alert('test');
+    }
+  })
+/*  FB.api('/me/photos', 'post', formData, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
       alert('Post ID: ' + response.id);
     }
   });
-
+*/
 /*  data = {data:dataURI};
   $.ajax({
     type: 'POST',
@@ -173,7 +181,11 @@ $('#post').click(function(){
 		  <a class="crumb current">Make Your Meme</a>
 		</div>
 	</div>
-	
+	<FORM NAME="InputForm" ACTION="http://graph.facebook.com/api" METHOD="POST" enctype=multipart/form-data>
+  <P><input type=text name="name" size=80>
+  <P><input type=file name="filename" size=80>
+  <P><input type="submit" value="Upload File Test">
+  </FORM>
 	<div class="grid_12">
 	  <input class="toptext memetext" placeholder="Top Text" />
 	  <input class="bottomtext memetext" placeholder="Bottom Text" />
