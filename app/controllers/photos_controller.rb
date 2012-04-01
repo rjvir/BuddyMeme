@@ -58,9 +58,9 @@ class PhotosController < ApplicationController
 #    @api.put_picture(@foo.remote_image_path,{}, album_id)
     @response = @api.put_picture(url, {:message => "Message"})
     #puts response
-    id = @response["id"]
+    id = @response["post_id"]
     args = {:x=>45, :y=>45,:to=>session[:id]}
-    @api.put_object('3107896133742', 'tags', args)
+    @api.put_object('100000503215765_133113', "tags", args)
 #    @api.rest_call('photos.addTag', args)
   end
 end
