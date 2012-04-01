@@ -53,6 +53,7 @@ class PhotosController < ApplicationController
   
   def upload
     url = "http://img.buddymeme.com/memes/#{params[:hash]}.png"
-    @at = session[:access_token];\
+    @at = session[:access_token];
+  end
 
 end
