@@ -50,5 +50,9 @@ class PhotosController < ApplicationController
     end
     #  	send_data data, :type => 'image/jpeg', :disposition => 'inline'    
   end
+  
+  def upload
+    url = "http://img.buddymeme.com/memes/#{params[:hash]}.png"
+    @at = session[:access_token];\
 
 end
