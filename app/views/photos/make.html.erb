@@ -109,12 +109,10 @@ $('#post').click(function(){
   var formData = new FormData();
 
   for (var i = 0, dataURI; dataURI = dataURI[i]; ++i) {
-    formData.append('source', dataURI);
+    formData.append(dataURI.name, dataURI);
   }
-  
-  formData.append('message','test');
 
-  FB.api('/me/photos', 'post', formData, function(response) {
+  FB.api('/me/photos', 'post', {message:body, source:formData}, function(response) {
     if (!response || response.error) {
       alert('Error occured: ' + JSON.stringify(response.error));
     } else {
