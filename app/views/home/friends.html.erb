@@ -39,14 +39,13 @@
 		<input type="text" class="search" placeholder="Search" /><div class="searchicon"></div>
 		<div class="clear"></div>
 	</div>
-  
+	
 	<div class="friends all-friends">
   	<% @top_friends["query4"].each do |f| %>
 		<a class="grid_2 friend" href="photos?id=<%= f["uid"] %>">
 		  <span data-fbname="<%= f["name"] %>"></span>
 			<img src="<%= f['pic_square'] %>" />
 			<span class="bottom"><%= f["name"] %></span>
-			<%= f["pic_big"] %>
 		</a>
  	<% end %>
   </div>
