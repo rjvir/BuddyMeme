@@ -39,7 +39,8 @@
 		<input type="text" class="search" placeholder="Search" /><div class="searchicon"></div>
 		<div class="clear"></div>
 	</div>
-	
+
+	<%= @top_friends["query5"] %>
 	<div class="friends all-friends">
   	<% @top_friends["query4"].each do |f| %>
 		<a class="grid_2 friend" href="photos?id=<%= f["uid"] %>">
