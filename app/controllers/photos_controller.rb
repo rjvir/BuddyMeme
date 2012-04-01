@@ -53,7 +53,7 @@ class PhotosController < ApplicationController
   end
   
   def upload
-    url = "http://img.buddymeme.com/memes/#{params[:hash]}.png"
+    url = "http://talktomindy.com/memes/#{params[:hash]}.png"
 	  @api = Koala::Facebook::API.new(session[:access_token])
 #    @api.put_picture(@foo.remote_image_path,{}, album_id)
     tags = "[{'x':45}, {'y':45}, {'to':#{session[:id]}}]"
