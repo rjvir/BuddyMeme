@@ -59,6 +59,6 @@ class PhotosController < ApplicationController
 #    tags = {:x=>45, :y=>45, :to=>session[:id]}
     response = @api.put_picture(url, {:message => "Message"})
 #    id = response["id"]
-#    @api.put_object(id, tags)
+#    @api.put_object(id, {}, tags)
   end
 end
