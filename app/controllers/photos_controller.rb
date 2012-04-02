@@ -60,7 +60,7 @@ class PhotosController < ApplicationController
 #    @api.put_picture(@foo.remote_image_path,{}, album_id)
     @uid = session[:id]
     @tags = "[{'tag_uid': '#{@uid}', 'x':45, 'y':45}]"
-    @response = @api.put_object('me', 'photos', {:message => "Message", :url=>url, tags => @tags})
+    @response = @api.put_object('me', 'photos', {:message => "Message", :url=>url, :tags => @tags})
 #    @response = @api.put_picture(url, {:message => "Message", :tags =>{:x=>45, :y=>45, :to=>session[:id]} })
     #puts response
     @id = @response["id"]
