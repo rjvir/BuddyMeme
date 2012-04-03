@@ -259,22 +259,22 @@ canvas {
 
 .button {
     margin:0 auto;
-    display:inline-block;
+    display:inline;
     margin-bottom:10px;
     border:5px solid #ddd;
     padding:6px 10px;
-    font-size:20px;
+    font-size:16px;
     text-decoration:none;
     font-weight:normal;
     border-radius:5px;
-    background-color:rgba(226,226,226,.6);
+    background-color:rgba(226,226,226,.4);
     color:#111;
     font-weight:bold;
 }
 
 .button:hover {
-    text-decoration:underline;
-    border:5px solid rgba(0,0,226,.8);
+    background-color:rgba(226,226,226,.6);
+    border:5px solid rgba(0,0,226,.6);
     cursor:pointer;
 }
 
@@ -322,4 +322,8 @@ canvas {
     width:720px;
     margin:10px auto;
     display:block;
+}
+
+.tacenter {
+    text-align:center;
 }
