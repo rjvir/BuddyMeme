@@ -289,3 +289,12 @@ canvas {
 .home img {
     display:inline-block;
 }
+
+.member img {
+    margin-bottom:10px;
+    margin-top:10px;
+}
+
+.member h3 {
+    text-align:center;
+}
