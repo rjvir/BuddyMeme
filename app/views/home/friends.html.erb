@@ -1,7 +1,4 @@
 <body>
-  <script type="text/javascript">
-    mixpanel.track("<%=@top_friends['query5'][0]['name']%>");
-  </script>
   <div id="fb-root"></div>
   <script>(function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -61,3 +58,6 @@
  	<% end %>
   </div>
 </div>
+<script type="text/javascript">
+  mixpanel.name_tag("<%=@top_friends['query5'][0]['name']%>");
+</script>
