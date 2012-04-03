@@ -272,3 +272,15 @@ canvas {
     color:#0000aa;
     text-decoration:none;
 }
+
+.home h2, .home p {
+    text-align:center;
+}
+
+.home {
+    text-align:center;
+}
+
+.home img {
+    display:inline-block;
+}
