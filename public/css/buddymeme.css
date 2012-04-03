@@ -30,18 +30,18 @@ h3,h4,p {
 	font-weight:normal;
 }
 
-h1 {
+.logo {
 	background-image: url(/images/logo.png);
 	height: 64px;
 	background-repeat: no-repeat;
 	text-indent: -9999px;
 	width: 400px;
 	display: block;
-	float: left;
+    margin:0 auto;
 	margin-bottom:-10px;
 }
 
-.splash h1 {
+.splash .logo {
 	margin-bottom:20px;
 }
 
