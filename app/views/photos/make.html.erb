@@ -102,12 +102,12 @@ function changeFontSize(newFontSize,multiplier){
 //once clicking submit
 $('#post').click(function(){
 	//save canvas element to a data uri
+  mixpanel.track("Submitted Meme");
 	dataURI = can.toDataURL();
 	//pass the data uri to a server to generate an image
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation';
   $('#formimage').val(dataURI);
-  mixpanel.track("Submitted Meme");
   $('#form').submit();
 /*  var formData = new FormData();
 
