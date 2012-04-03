@@ -26,7 +26,7 @@ h1,h2,h3,h4,p {
 }
 
 h3,h4,p {
-	font-family:'proxima-nova-1','proxima-nova-2';
+	font-family:'proxima-nova-1','proxima-nova-2', helvetica, arial, sans-serif;
 	font-weight:normal;
 }
 
@@ -48,7 +48,7 @@ h3,h4,p {
 h2 {
 	font-size:52px;
 	line-height:1em;
-	font-family:'proxima-nova-1', 'proxima-nova-2', 'peachy-keen-1', 'peachy-keen-2';
+	font-family:'proxima-nova-1', 'proxima-nova-2', 'peachy-keen-1', 'peachy-keen-2', helvetica, arial, sans-serif;
 }
 
 h3 {	
@@ -99,7 +99,7 @@ h4 {
 	text-decoration:none;
 	margin-right:10px;
 	margin-left:10px;
-	font-family:'proxima-nova-1';
+	font-family:'proxima-nova-1', helvetica, arial, sans-serif;
 	color:#0000aa;
 }
 
@@ -138,7 +138,7 @@ h4 {
 	background-color:rgba(226,226,226,.4);
 	border-radius:8px;
 	box-shadow:1px solid red;
-	font-family:'proxima-nova-1','proxima-nova-2';
+	font-family:'proxima-nova-1','proxima-nova-2', helvetica, arial, sans-serif;
 	overflow:hidden;
 	height:74px;
 	display:block;
@@ -171,7 +171,7 @@ h4 {
 	border-radius:4px;
 	margin:0;
 	width:400px;
-	font-family:'proxima-nova-1', 'proxima-nova-2';
+	font-family:'proxima-nova-1', 'proxima-nova-2', helvetica, arial, sans-serif;
 	float:left;
 	display:block;
 }
@@ -246,7 +246,7 @@ ul.friends li:nth-child(4n+4){
     display:block;
     padding:5px;
     margin-bottom:10px;
-    font-family:'proxima-nova-1','proxima-nova-2';
+    font-family:'proxima-nova-1','proxima-nova-2', helvetica, arial, sans-serif;
     font-size:24px;
     border:1px solid #aaa;
     border-radius:5px;
