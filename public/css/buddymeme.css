@@ -257,11 +257,21 @@ canvas {
     margin:0 auto;
 }
 
-#post {
-    width:140px;
+.button {
     margin:0 auto;
-    display:block;
+    display:inline-block;
     margin-bottom:10px;
+    border:5px solid #ddd;
+    padding:3px 5px;
+    font-size:22px;
+    text-decoration:none;
+    font-weight:normal;
+    background-color:rgba(226,226,226,.9);
+}
+
+.button:hover {
+    text-decoration:underline;
+    border:5px solid rgba(0,0,226,.5);
 }
 
 .footer {
