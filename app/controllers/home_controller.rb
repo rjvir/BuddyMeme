@@ -52,5 +52,9 @@ class HomeController < ApplicationController
 	def terms
 
 	end
+	
+	def permissions
+	  
+  end
 
 end

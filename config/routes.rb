@@ -68,4 +68,5 @@ BuddyMeme::Application.routes.draw do
   match "upload" => 'photos#upload'
   match "about" => 'home#about'
   match "terms" => 'home#terms'
+  match "permissions" => 'home#permissions'
 end
