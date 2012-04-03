@@ -1,4 +1,12 @@
 <body>
+  <div id="fb-root"></div>
+  <script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=204060336365834";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));</script>
 	<div class="supercontainer">
 	  <div class="container_12">
 		  <div class="grid_12">
@@ -7,23 +15,17 @@
 		</div>
 	</div>
 	<div class="container_12">
-	    <div class="grid_5 cycle">
-	    	<img src="/images/rauh.png" />
-	    	<img src="/images/neil.png" />
-	    	<img src="/images/han.png" />
-	    	<img src="/images/martin.png" />
-	    	<img src="/images/danyaal.png" />
-	    </div>
-		<div class="grid_6 prefix_1">
+		<div class="grid_8 prefix_2 suffix_2">
 		    <h2>Create Memes of Your Friends</h2>
 		    <h3>View and create hilarious memes using pictures of your friends. It's super easy and fun!</h3>
 		    <%= link_to 'Login with  Facebook', @auth_url, :class=>"facebook-login"%>
 	    </div>
 	  </div>
+    <div class="grid_8 prefix_2 suffix_2 cycle">
+    	<img src="/images/rauh.png" />
+    	<img src="/images/neil.png" />
+    	<img src="/images/han.png" />
+    	<img src="/images/martin.png" />
+    	<img src="/images/danyaal.png" />
+    </div>
 	</div>
-	<div class="container_12">
-		<div class="grid_6 prefix_6">
-			<div class="fb-like" data-href="http://buddymeme.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-font="arial"></div>
-		</div>
-	</div>
-
