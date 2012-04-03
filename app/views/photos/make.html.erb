@@ -107,6 +107,7 @@ $('#post').click(function(){
 	//saveImage(dataURI);
   var body = 'Reading JS SDK documentation';
   $('#formimage').val(dataURI);
+  mixpanel.track("Submitted Meme");
   $('#form').submit();
 /*  var formData = new FormData();
 
@@ -195,3 +196,6 @@ $('#post').click(function(){
 	  <canvas id="canvas" width="<%= @photo[0]['src_big_width'] %>" height="<%= @photo[0]['src_big_height'] %>" style="width:<%= @photo[0]['src_big_width'] %>; height:<%= @photo[0]['src_big_height'] %>; margin:0 auto;"></canvas>
     
 	</div>
+	<script type="text/javascript">
+    mixpanel.track("Selected Photo");
+  </script>
