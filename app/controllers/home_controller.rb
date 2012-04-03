@@ -33,7 +33,7 @@ class HomeController < ApplicationController
 			:query5 => "SELECT name FROM profile WHERE id=me()"
 			)
 			#profile = @api.get_object("me")
-			session[:name] = @top_friends["name"]
+			session[:name] = @top_friends["query5"]["name"]
 			#@test_query = @api.fql_query("SELECT pic_big FROM user WHERE uid='1200702'")
 		rescue Exception=>ex
 			puts ex.message
