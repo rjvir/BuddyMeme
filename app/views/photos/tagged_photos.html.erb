@@ -25,13 +25,20 @@
     <a href="photos?id=<%= @identifier %>"> Profile Pictures</a> - 
     <a class="current"> Tagged Pictures</a>
   </div>
+<% count = 0 %>
 <% @tagged_photos["query2"].each do |photo| %>
 	<% if photo["src_big_width"] > 300 && photo["src_big_height"] > 300 %>
+	  <% count++ %>
 	  <a class="grid_2 thumb-container" href="make?pid=<%= photo["pid"] %>&uid=<%= @identifier %>"%>
 	    <img src="<%= photo["src"] %>" width="<%= photo["src_width"] %>" height="<%= photo["src_height"] %>" data-bigWidth="<%= photo["src_big_width"] %>" data-bigHeight="<%= photo["src_big_height"] %>" />
 	  </a>
 	<%end%>
 <%end %>
+<% if count<1 %>
+<div class="grid_12">
+  Unfortunately, this user has disabled apps from viewing his/her photos, so you won't be able to create a meme of him/her. <a href="/permissions" style="color:#0000aa; text-decoration:none;">Here is a step-by-step guide</a> on how to enable photo permissions for apps - send this over to your friend so you will be able to create the meme you've been thinking about!
+</div>
+<% end %>
 </div>
 </div>
 <script type="text/javascript">
