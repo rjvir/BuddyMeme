@@ -271,6 +271,11 @@ canvas {
 .footer a {
     color:#0000aa;
     text-decoration:none;
+    margin-right:10px;
+}
+
+.footer div {
+    margin-right:10px;
 }
 
 .home h2, .home p {
