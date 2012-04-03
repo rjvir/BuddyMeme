@@ -298,3 +298,8 @@ canvas {
 .member h3 {
     text-align:center;
 }
+
+.member a {
+    color:#0000aa;
+    text-decoration:none;
+}
