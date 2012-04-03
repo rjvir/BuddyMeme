@@ -266,12 +266,14 @@ canvas {
     font-size:22px;
     text-decoration:none;
     font-weight:normal;
-    background-color:rgba(226,226,226,.9);
+    background-color:rgba(0,0,226,.5);
+    border-radius:5px;
 }
 
 .button:hover {
     text-decoration:underline;
-    border:5px solid rgba(0,0,226,.5);
+    border:5px solid rgba(0,0,226,.8);
+    cursor:pointer;
 }
 
 .footer {
