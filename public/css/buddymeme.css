@@ -73,7 +73,7 @@ h4 {
   cursor: pointer;
   text-indent: -9999px;
   display:block;
-  float:left;
+  margin:0 auto;
 }
 
 .facebook-login:hover {
