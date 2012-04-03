@@ -28,7 +28,7 @@
 <% count = 0 %>
 <% @tagged_photos["query2"].each do |photo| %>
 	<% if photo["src_big_width"] > 300 && photo["src_big_height"] > 300 %>
-	  <% count++ %>
+	  <% count = count+1 %>
 	  <a class="grid_2 thumb-container" href="make?pid=<%= photo["pid"] %>&uid=<%= @identifier %>"%>
 	    <img src="<%= photo["src"] %>" width="<%= photo["src_width"] %>" height="<%= photo["src_height"] %>" data-bigWidth="<%= photo["src_big_width"] %>" data-bigHeight="<%= photo["src_big_height"] %>" />
 	  </a>
